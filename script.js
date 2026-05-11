@@ -1,295 +1,212 @@
-// JavaScript Tasks – Type Casting & Flow Control
-// Task 1 – Predict the Output
-// Write the output and datatype for below:
-console.log("Predict the Output:");
+//Section 1: Variables (1–8)
+//1.What is the output?
+var a = 10;
+a = 15;
+console.log(a); //15
 
-console.log("10" + 5)   //105
-console.log(10 + true)  //11
-console.log(false + null)   //0
-console.log("Hello" + undefined)    //Helloundefined
-console.log([1,2] + 5)  //1,25
-console.log("--------------------------------------------------------------------------------------------------------------")
+//2.What happens here?
+let b = 20;
+//let b = 30;    // Error -> Redeclration is not possible
 
+//3.What is the output?
+const c = 50;
+console.log(c); //50
 
-// Task 2 – Implicit Type Casting
-// Create examples for:
+//4.Identify error:
+const x = 10;
+//x = 20;       Error -> It can't accept Reuse or Reintialiazation 
 
-console.log("Implicit Type Casting");
-
-// 1.String + Number
-
-console.log("Hi"+10);   //Hi10
-
-// 2.Boolean + Number
-
-console.log(true+5);    //6
-
-// 3.Array + String
-
-console.log([1, 2, 3]+"Hi");  //1,2,3Hi
-
-// 4.Object + Number
-
-console.log({key:9}+1); //[Object Object]1
-
-//5.Null + Number
-
-console.log(null + 5);  //5
-
-// Print datatype using typeof.
-
-console.log("Type is :"+typeof("Hi"+10));   //string
-console.log("Type is :"+typeof(true+5));    //number
-console.log("Type is :"+typeof([1, 2, 3]+"Hi"));    //string
-console.log("Type is :"+typeof({key:9}+1)); //string
-console.log("Type is :"+typeof(null + 5));  //number
-console.log("--------------------------------------------------------------------------------------------------------------")
-
-// Task 3 – Explicit Type Casting
-
-console.log("Explicit Type Casting");
-
-// Convert the following into Number:
+//5.Output?
+var p = 5;
+var p = 10;
+console.log(p);  //10
 
 
-// "500"
-console.log("Before Type is :"+typeof("500"));//string 
-console.log(Number("500")); //500
-console.log("After Type is :"+typeof(Number("500"))); //number
+//6.Output?
+let q = 25;
+q = q + 10;
+console.log(q); //35
+
+//7.Output?
+const r = 7;
+console.log(r + 3);//10
+
+//8.Fill correct keyword:
+//___ a = 10;
+
+var a = 10;
+
+//--------------------------------------------------------------------------------------------------------------
+
+//Section 2: Console Methods (9–12)
+//9.Which method prints normal output?
+
 console.log();
 
-//true
-console.log("Before Type is :"+typeof(true));//boolean
-console.log(Number(true));  //1
-console.log("After Type is :"+typeof(Number(true)));
-console.log();
+//10.Which method shows warning?
 
+console.warn();
 
-//false
-console.log("Before Type is :"+typeof(fasle));//boolean
-console.log(Number(false)); //0
-console.log("After Type is :"+typeof(Number(false)));
-console.log();
+//11.Which method shows error?
 
+console.error();
 
-//null
-console.log("Before Type is :"+typeof(null));//null
-console.log(Number(null));  //0
-console.log("After Type is :"+typeof(Number(null)));
-console.log();
+//12.What does this do?
+console.clear();        // This will clear the console.
 
-//string
-console.log("Before Type is :"+typeof("abc"));//string
-console.log(Number("abc")); //NaN
-console.log("After Type is :"+typeof(Number("abc")));
-console.log();
+//--------------------------------------------------------------------------------------------------------------
 
-//array
-console.log("Before Type is :"+typeof([100]));//object
-console.log(Number([100])); //NaN or 100
-console.log("After Type is :"+typeof(Number([100]))); 
-console.log("--------------------------------------------------------------------------------------------------------------")
+//Section 3: Data Types (13–18)
 
+//13.Output?
+let a = "hello";
+console.log(typeof a); //string
 
-// Task 4 – Boolean Constructor
-console.log("Boolean Constructor");
+//14.Output?
+let b = 100;
+console.log(typeof b); //number
 
-// Check whether below values are true or false using Boolean().
+//15.Output?
+let c = false;
+console.log(typeof c); //boolean
 
-// 1. ""
-console.log(Boolean(""));   //false
+//16.Output?
+let d;
+console.log(d);  //undefined
 
-//2. "javascript"
-console.log(Boolean("javascript"));  //true
+//17.What is type of null?
+// when ever i call the varible it will return zero or nothing than it means 'Null'.
+//If a variable is intentionally set to have no value, we use null.
 
-//3. 0
-console.log(Boolean(0));    //false
+//18.Convert string to number:
+//"25"
+var num = "25";
+console.log(typeof(num));
+num = Number(num);
+console.log(typeof(num));
 
-//4. 1
-console.log(Boolean(1));    //true
+//--------------------------------------------------------------------------------------------------------------
 
-//5. null
-console.log(Boolean(null)); //false
+//Section 4: Arrays (19–24)
 
-//6. undefined
-console.log(Boolean(undefined));    //false
+//19.Create array of 3 fruits.
 
-//7. []
-console.log(Boolean([]));   //true
+var fruits = ["Apple","Banana","Mango"];
+console.log(fruits);
 
-//8. {}
-console.log(Boolean({}));   //true
-console.log("--------------------------------------------------------------------------------------------------------------")
+//20.Output?
+let arr = ["a","b","c"];
+console.log(arr[1]);        //b
 
+//21.Output?
+let arr = ["x","y","z"];
+console.log(arr[arr.length-1]); //z
 
-//Task 5 – Student Pass or Fail
-console.log("Student Pass or Fail:");
+//22.How to get first element?
+console.log(arr[0]);
 
-// Take one variable:
-// let mark = 45
-// Condition:
-// Above 35 → Pass
-// Below 35 → Fail
-// Use if else.
+//23.Output?
+let arr = ["apple","banana"];
+console.log(arr.length);       //2
 
-let mark = 28;
-if(mark > 35){
-    console.log("Pass");
-}
-else{
-    console.log("Fail");
-}
-console.log("--------------------------------------------------------------------------------------------------------------")
+//24.Add new element to array.
 
+let arr = ["apple,banana"];
+//arr.push("mango");
+arr[arr.length] = "mango";
+arr[arr.length] = "orange";
 
-//Task 6 – Voting Eligibility
-console.log("Voting Eligibility:");
+console.log(arr);
 
-//Create a variable:
-//let age = 20
-//Conditions:
-// -> 18 and above → Eligible
-// -> Otherwise → Not Eligible
+//--------------------------------------------------------------------------------------------------------------
 
+// Section 5: Objects (25–28)
 
-let age = 15;
-if(age >= 18){
-    console.log("Eligible");
-}
-else{
-    console.log("Not Eligible");
-}
-console.log("--------------------------------------------------------------------------------------------------------------")
+// 25.Create object with name & age.
 
-
-// Task 7 – Greatest Number
-console.log("Greatest Number:");
-// Find greatest among 3 numbers using if else if.
-// Example:
-// let a = 50
-// let b = 80
-// let c = 30
-
-let a = 50;
-let b = 80;
-let c = 30;
-
-if(a>b && a>c){
-    console.log("The greatest number is : "+a);
-}
-else if(b>c){
-    console.log("The greatest number is : "+b);
-}
-else{
-    console.log("The greatest number is : "+c);
+let person = {
+    name : ["virat","Rohit"],
+    age : [34,36]
 }
 
-console.log("--------------------------------------------------------------------------------------------------------------")
+console.log(person);
 
+//26.Output?
+let obj = {name:"Naveen"};
+console.log(obj.name);        //Naveen
 
+//27.Output?
+let obj2 = {
+  fruits: ["apple","banana"]
+};
+console.log(obj2.fruits[1]); //banana
 
-// Task 8 – Traffic Light System
-console.log("Traffic Light System:")
-// Using switch statement:
-// red → stop
-// yellow → ready
-// green → go
-
-let trafficSignal = "red";
-
-switch (trafficSignal) {
-    case "red":
-        console.log("Stop");
-        break;
-    
-    case "yellow":
-        console.log("Ready");
-        break;
-
-
-    case "green":
-        console.log("Go");
-        break;
-
-    default:
-        console.log("Problem with traffic light....")
-        break;
+//28.How to access last element inside object array?
+let person = {
+    name : ["virat","Rohit"],
+    age : [34,36]
 }
 
-console.log("--------------------------------------------------------------------------------------------------------------")
+console.log(person.name[0],person.age[0]);
+
+//--------------------------------------------------------------------------------------------------------------
+
+// Section 6: Arithmetic Operators (29–32)
+
+//29.Output?
+console.log(5 + 3); //8
+
+//30.Output?
+console.log(10 % 3); //1
+
+//31.Output?
+console.log(2 ** 3); //8
+
+//32.Output?
+console.log(10 / 2); //5
+
+//--------------------------------------------------------------------------------------------------------------
+
+//Section 7: Increment / Decrement (33–36)
+
+//33.Output?
+let a = 5;
+a++;
+console.log(a); //6
+
+//34.Output?
+let b = 5;
+let c = b++;
+console.log(b, c); //6 5
+
+//35.Output?
+let x = 5;
+let y = ++x;
+console.log(x, y); //6 6
+
+//36.Output?
+let m = 3;
+let n = m--;
+console.log(m, n);//2 3
+
+//--------------------------------------------------------------------------------------------------------------
+
+//Section 8: Comparison & Logical (37–39)
+
+//37.Output?
+console.log(5 == "5");  //true
+
+//38.Output?
+console.log(5 === "5");  //false
+
+//39.Output?
+console.log(true && false || true); //true
+
+//--------------------------------------------------------------------------------------------------------------
+
+//Section 9: Ternary (40)
+
+//40.Output?
+5 > 3 ? console.log("Yes") : console.log("No");//yes
 
 
-// Task 9 – Login System
-console.log("Login System");
-
-// Create variables:
-// let username = "admin"
-// let password = "1234"
-// Conditions:
-// Both correct → Login Success
-// Otherwise → Invalid Login
-// Use nested if.
-
-
-let username = "admin";
-let password = "1234";
-
-if(username == "admin"){
-    if(password == "1234"){
-        console.log("Login Success");
-    }
-    else{
-        console.log("Invalid Login");
-        
-    }
-}
-else{
-    console.log("Invalid Login");
-    
-}
-
-console.log("--------------------------------------------------------------------------------------------------------------")
-
-
-// Task 10 – Session Finder
-console.log("Session Finder:");
-
-// Take hour value:
-// let hour = 14
-// Conditions:
-// 1–12 → Morning
-// 13–15 → Afternoon
-// 16–19 → Evening
-// 20–24 → Night
-// Use else if.
-
-let hour = 14;
-
-if(hour>=1 && hour<=12){
-    console.log("Morning");
-}
-else if(hour>=13 && hour<=15){
-    console.log("Afternoon");  
-}
-else if(hour>=16 && hour<=19){
-    console.log("Evening");
-}
-else if(hour>=20 && hour<=24){
-    console.log("Night");
-}
-else{
-    console.log("Give time between 1 to 24");
-}
-
-console.log("--------------------------------------------------------------------------------------------------------------")
-
-// Bonus Challenge 🔥
-// Predict outputs without running:
-
-console.log(true + true)    //2
-console.log("5" - 2)    //3
-console.log("5" + 2)    //52
-console.log(null + 1)   //1
-console.log(undefined + 1)  //NaN
-console.log(Boolean(" "))   //true
-console.log(Number(true))   //1
